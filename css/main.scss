@@ -1,0 +1,318 @@
+$background-color: #b2b2b2;
+$header-backColor: #1e1b1e; 
+$header-color: #0a78ff;
+$boxShadow-color: #888888;
+$lightRed-color: #dc3545;
+$green-color: #138877;
+$dark-red: #7e0f23;
+$year-color: #fb0076a6;
+$contactFormColor: #7d003b; 
+$headerTitle-color: #ffb87a;
+$portfolioBox-borderColor: #4d4b4b;
+$portfolioBoxHover-color: #221f1f;
+$progressBlue-Color: #049dff;
+$progressYellow-Color: #fdba04;
+$progressPink-Color: #ed687c;
+$progressGreen-Color: #1abc9c;
+$progressBack-Color: #7e003a;
+$font-family: Helvetica;
+		body {
+			background-color: $background-color;
+			height:auto;
+			margin: 0px auto;
+			text-align: justify;
+		}
+		.header {
+			background-color: $header-backColor; 
+			color: $header-color;
+			height: auto;
+			padding-top: 20px;
+			margin-top: 20px;
+		}
+		.content {
+			background-color: $header-backColor; 
+			color: white;
+			height: auto;
+			box-shadow: 4px 4px 2px $boxShadow-color;
+			font-family: $font-family;
+			margin-bottom: 20px;
+		}
+		#profile-pic {
+			border-radius: 50%;
+			width: 600px / 960px * 100%;
+		}
+		.bio-info {
+			color: $lightRed-color;
+			float: left;
+		}
+		.ruler {
+			background-color: $green-color;
+		}
+		.ruler-margin {
+			margin-top: 30px;
+		}
+		.justify
+		{
+			text-align: justify;
+		}
+		.degree{
+			background-color: $dark-red;
+			padding: 10px;
+		}
+		.year {
+			background-color: $year-color;
+			padding: 10px;
+		}
+		.where {
+			padding-top: 10px;
+		}
+		.start {
+			background-color: $dark-red;
+			padding: 10px;
+			text-align: left;
+
+		}
+		.end {
+			background-color: $year-color;
+			padding: 10px;
+		}
+		.clear-Job {
+			clear: both;
+			padding: 5px;
+		}
+		.header-title {
+			float: left;
+			font-size: 18px;
+			color: $headerTitle-color;
+			text-transform: uppercase;
+		}
+		@media only screen and (max-width: 990px){
+			.portfolioBox img{width: 300px !important;height: 300px !important;}
+		}
+		.portfolioBox {
+			max-width: 300px;
+			max-height: 300px;
+			border: 1px solid $portfolioBox-borderColor;
+			display: inline-block;
+			margin: 10px;
+		}
+		.portfolioBox {
+			input {
+			display: none;
+		}
+		    img {
+			width:200px; 
+			height:200px;
+		}
+			input:hover {
+			display: none;
+			background: red !important;
+			opacity: 1 !important;
+		}
+	}
+		.portfolioBox:hover {
+			background: $portfolioBoxHover-color;
+			opacity: 0.2;
+			cursor: pointer;
+			-webkit-transform: scale(1.1);
+       		-ms-transform: scale(1.1);
+      		transform: scale(1.1);
+		input {
+		    position: absolute;
+   	    	margin: -50px 60px !important; 
+			display: block !important;
+		}
+	}
+	 	@media only screen and (max-width: 990px){
+			.contactForm{width: 96% !important;}
+		}
+		.contactForm {
+			margin: 3px;
+			background-color: black;
+			color: white;
+			border: 3px solid $contactFormColor;
+			border-top: none !important;
+			width: 30%;
+		}
+		@media only screen and (max-width: 990px){
+			#message{width: 96% !important;}
+		}
+		#message {
+			width: 94%;
+			height: 180px;
+		}
+		.submitBtn {
+			background-color: $contactFormColor;
+			border: none;
+			width: 90px;
+			height: 35px;
+			font-size: 18px;
+			color: white;
+		}
+		.submitBtn:hover {
+			background-color: $year-color;
+			cursor: pointer;
+		}
+		.logo {
+			width: 3em;
+			height: 3em;
+			transform: translateY(-90%);
+		}
+		#footerText{
+			margin-top: -40px;
+		}
+
+/* Start progress bar */
+		.progress{
+			width: 150px;
+			height: 150px;
+			line-height: 150px;
+			background: none;
+			margin: 0 auto;
+			box-shadow: none;
+			position: relative;
+			display: inline-block;
+			margin: 10px;
+		.progress-left{
+			left: 0;
+		}
+		.progress-bar{
+			width: 100%;
+			height: 100%;
+			background: none;
+			border-width: 12px;
+			border-style: solid;
+			position: absolute;
+			top: 0;
+		}
+        .progress-left .progress-bar{
+			left: 100%;
+			border-top-right-radius: 80px;
+			border-bottom-right-radius: 80px;
+			border-left: 0;
+			-webkit-transform-origin: center left;
+			transform-origin: center left;
+		}
+		.progress-right{
+			right: 0;
+		}
+		.progress-right .progress-bar{
+			left: -100%;
+			border-top-left-radius: 80px;
+			border-bottom-left-radius: 80px;
+			border-right: 0;
+			-webkit-transform-origin: center right;
+			transform-origin: center right;
+			animation: loading-1 1.8s linear forwards;
+		}
+	    .progress-value{
+			width: 90%;
+			height: 90%;
+			border-radius: 50%;
+			background: $progressBack-Color;
+			font-size: 24px;
+			color: white;
+			line-height: 135px;
+			text-align: center;
+			position: absolute;
+			top: 5%;
+			left: 5%;
+		}
+		}
+		.progress:after{
+			content: "";
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			border: 12px solid #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.progress > span{
+			width: 50%;
+			height: 100%;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			z-index: 1;
+		}
+		.progress.blue .progress-bar{
+			border-color: $progressBlue-Color;
+		}
+		.progress.blue .progress-left .progress-bar{
+			animation: loading-2 1.5s linear forwards 1.8s;
+		}
+		.progress.yellow .progress-bar{
+			border-color: $progressYellow-Color;
+		}
+		.progress.yellow .progress-left .progress-bar{
+			animation: loading-3 1s linear forwards 1.8s;
+		}
+		.progress.pink .progress-bar{
+			border-color: $progressPink-Color;
+		}
+		.progress.pink .progress-left .progress-bar{
+			animation: loading-4 0.4s linear forwards 1.8s;
+		}
+		.progress.green .progress-bar{
+			border-color: $progressGreen-Color;
+		}
+		.progress.green .progress-left .progress-bar{
+			animation: loading-5 1.2s linear forwards 1.8s;
+		}
+		@keyframes loading-1{
+			0%{
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			100%{
+				-webkit-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+		}
+		@keyframes loading-2{
+			0%{
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			100%{
+				-webkit-transform: rotate(170deg);
+				transform: rotate(170deg);
+			}
+		}
+		@keyframes loading-3{
+			0%{
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			100%{
+				-webkit-transform: rotate(170deg);
+				transform: rotate(170deg);
+			}
+		}
+		@keyframes loading-4{
+			0%{
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			100%{
+				-webkit-transform: rotate(150deg);
+				transform: rotate(150deg);
+			}
+		}
+		@keyframes loading-5{
+			0%{
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			100%{
+				-webkit-transform: rotate(140deg);
+				transform: rotate(140deg);
+			}
+		}
+		@media only screen and (max-width: 990px){
+			.progress{ margin-bottom: 20px; }
+		}
+
+		/* End progress bar */
